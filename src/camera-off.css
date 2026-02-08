@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.eyes {
+  position: absolute;
+  display: flex;
+  gap: 18px;
+}
+
+.eyes:nth-child(1) { top: 20%; left: 25%; }
+.eyes:nth-child(2) { top: 45%; left: 60%; }
+.eyes:nth-child(3) { top: 70%; left: 30%; }
+.eyes:nth-child(4) { top: 30%; left: 75%; }
+
+.eye {
+  width: 42px;
+  height: 42px;
+  background: #0a0a0a;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(255,255,255,0.15);
+}
+
+.pupil {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  transition: transform 0.1s linear;
+}
+
+.lid1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(152, 89, 13);
+  top: -100%;
+  left: 0;
+  transition: top 0.15s ease-in-out;
+}
+
+.cursor-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.12) 0%,
+    rgba(255,255,255,0.08) 30%,
+    rgba(0,0,0,0.9) 70%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}

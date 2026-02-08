@@ -1,0 +1,207 @@
+/*font*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.cdnfonts.com/css/futura-condensed-extra');
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: rgb(22, 22, 22);
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* View CAMERA */
+
+.camera {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-image: url("/image/background2.png");
+}
+.camera::before {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: .2;
+    z-index: 1000;
+    pointer-events: none;
+    background: url("/image/noise.gif") repeat;
+}
+
+.camera-border {  
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 97%;
+  height: 97%;
+  border: 3px solid #cdcdcddd;
+  opacity: 0.8 ;
+  pointer-events: none;
+}
+
+.rec-text {
+  margin-top : 10px;
+  margin-left : 10px;
+  color: #ff0000;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000,
+    0 0 40px #8b0000,
+    0 0 70px #8b0000;
+  animation: neonGlow 1.5s ease-in-out infinite;
+}
+
+.cam-info {
+  margin-top : 10px;
+  margin-left : 10px;
+  color: #b1a8a8;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;      
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 30px #ff0000,
+      0 0 40px #8b0000,
+      0 0 70px #8b0000;
+  }
+  50% {
+    opacity: 0.7;
+    text-shadow: 
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 15px #ff0000,
+      0 0 20px #8b0000,
+      0 0 35px #8b0000;
+  }
+}
+
+.change-button{
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 20px 20px;
+  background-color: #000000dd;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 10001;
+}
+
+.change-button:hover {
+  background-color: #000000ff; 
+  transition: transform 0.5s;
+  transform: scale(1.05);
+}
+
+.change-camera {
+  color: #ec0505;
+  text-decoration: none !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 
+    0 0 10px #ec0505,
+    0 0 20px #ec0505,
+    0 0 30px #ec0505,
+    0 0 40px #8b0000,
+    0 0 70px #8b0000;
+}
+
+.exit-button {
+  border-radius: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  padding: 20px 20px;
+  background-color: #000000dd;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 10001;
+}
+
+.exit-button:hover {
+  background-color: #000000ff; 
+  transition: transform 0.5s;
+  transform: scale(1.05);
+}
+.exit-camera {
+  color: #ec0505;
+  text-decoration: none !important;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 
+    0 0 10px #ec0505,
+    0 0 20px #ec0505,
+    0 0 30px #ec0505,
+    0 0 40px #8b0000,
+    0 0 70px #8b0000;
+}
